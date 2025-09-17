@@ -21,6 +21,38 @@ Task:
 3) Add a setter updateGpa(newGpa) or use a set accessor for gpa that validates 0.0–4.0.
 4) Create an instance/object and output its attributes using the getter(s).
 */
+class Student {
+
+    constructor(firstName, lastName,gpa) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gpa = gpa;
+    }
+
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+
+    set updateGpa(newGpa){
+        if(newGpa >= 0 && newGpa <= 4.0){
+            this.gpa = newGpa;
+        }
+        else {
+            console.log("Invalid Gpa");
+        }
+    }
+}
+
+const student = new Student("Maryam", "Aladsani", 3.0)
+
+console.log("Full Name: " + student.fullName); //Maryam Aladsani
+console.log("Current GPA: " + student.gpa);   // 3.0
+
+student.updateGpa = 4.0 // valid update
+console.log("Updated GPA: " + student.gpa);   // 4.0
+
+student.updateGpa = 5.0 // invalid update
+console.log("Updated Gpa: " + student.gpa);   //4.0
 
 // ====================================
 // TODO-2: OBJECT AS MAP + for...in LOOP
@@ -68,7 +100,7 @@ Task:
 1) Write a function that expects a non-empty array and returns the maximum element of the array.
 2) Intentionally pass an empty array to trigger an error.
 3) Handle the error using try { ... } catch (e) { ... } finally { ... } and log messages
-   in each block so you can see the flow of control.
+   in each block, so you can see the flow of control.
 */
 
 // ===================================================================================
