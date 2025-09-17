@@ -63,6 +63,16 @@ Task:
 2) Iterate over it with for...in and display each key and value.
 */
 
+const Courses = {
+    SWE363: "Web Engineering and Development",
+    SWE316: "Software Design",
+    MATH101: "Calculus I"
+}
+
+for (let key in Courses) {
+    console.log(`${key} : ${Courses[key]}`);
+}
+
 // =========================================
 // TODO-3: STRING OBJECT — charAt() & length
 // =========================================
