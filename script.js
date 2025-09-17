@@ -81,6 +81,12 @@ Task:
 1) Create a String object or plain string.
 2) Use .charAt(index) and .length to output characters and size.
 */
+const fullName = "Maryam Aladsani";
+console.log("The length of [" + fullName + "] is: " + fullName.length)
+
+for (index = 0; index < fullName.length; index++) {
+    console.log("Character at index: " + index + ", " + fullName.charAt(index));
+}
 
 // ===================================
 // TODO-4: DATE — day, month, and year
